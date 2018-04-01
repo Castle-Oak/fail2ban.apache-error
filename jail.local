@@ -13,3 +13,12 @@ logpath = /var/log/apache2/*access.log
 maxretry = 2
 findtime = 600
 bantime = 86400
+
+[apache-403]
+enabled = true
+port = http,https
+filter = apache-404
+logpath = /var/log/apache2/*access.log
+maxretry = 2
+findtime = 600
+bantime = 86400
