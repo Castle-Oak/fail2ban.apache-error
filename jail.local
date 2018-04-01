@@ -1,0 +1,15 @@
+## Append the following to your jail.local file under /etc/fail2ban/. 
+## It is not recommended to modify jail.conf as this file will revert during an update
+
+#
+# HTTP servers
+#
+
+[apache-404]
+enabled = true
+port = http,https
+filter = apache-404
+logpath = /var/log/apache2/*access.log
+maxretry = 2
+findtime = 600
+bantime = 86400
